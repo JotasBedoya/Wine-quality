@@ -1,71 +1,90 @@
-Wine Quality Classification
-Overview
+Wine Quality Classification – Machine Learning Pipeline
 
-This project analyzes the Wine Quality dataset and builds a machine learning classification model to predict wine quality based on physicochemical properties. The workflow covers data exploration, preprocessing, feature scaling, correlation analysis, and model evaluation.
+Python + Scikit-learn + Pandas + Seaborn
 
-Dataset
+🎯 Objective
+This project builds an end-to-end machine learning classification pipeline to predict wine quality based on physicochemical properties.
+It showcases core Data Analysis and Machine Learning skills commonly required for Data Analyst and Data Scientist roles.
 
-Samples: 1,143 wines
+🧩 Problem Statement
+The wine dataset contains multiple chemical attributes, but without analysis it is difficult to:
 
-Features: 11 physicochemical variables
+Understand which features influence wine quality
 
-Target: quality (0–10, treated as categorical)
+Identify correlations between physicochemical variables
 
-Key features include acidity levels, sugar, sulphates, alcohol, pH, and density.
+Predict wine quality consistently
 
-Tools & Libraries
+Evaluate model performance across different quality classes
 
-Python
+This results in limited insight into quality drivers and predictive capability.
 
-Pandas, NumPy
+🚀 Solution Architecture
 
-Matplotlib, Seaborn
+RAW CSV Dataset
+→ Exploratory Data Analysis (EDA)
+→ Data Cleaning & Feature Scaling
+→ Correlation Analysis
+→ Train/Test Split
+→ Random Forest Classification Model
+→ Model Evaluation (Accuracy, Report, Confusion Matrix)
 
-Scikit-learn
+🏗️ Tech Stack
 
-Workflow
+Layer	Tool
+Data Processing	Python, Pandas, NumPy
+Visualization	Matplotlib, Seaborn
+Machine Learning	Scikit-learn
+Modeling	RandomForestClassifier
+Version Control	GitHub
 
-Data loading and inspection
+📂 Repository Structure
 
-Exploratory Data Analysis (EDA)
+wine-quality-classification/
+│── datasets/
+│   └── WineQT.csv
+│── notebooks/
+│   └── wine_quality_analysis.ipynb
+│── README.md
 
-Data cleaning (no missing values)
 
-Feature scaling with StandardScaler
+🧮 Model Output & Evaluation
 
-Correlation analysis (heatmap)
-
-Train/Test split (80/20)
-
-Model training using RandomForestClassifier
-
-Evaluation with accuracy, classification report, and confusion matrix
-
-Model Performance
+Target: Wine quality score (0–10, treated as categorical)
 
 Accuracy: ~69%
 
 Strong performance on majority classes (quality 5 and 6)
 
-Lower recall on minority classes due to class imbalance
+Lower recall for minority classes due to class imbalance
 
-Key Takeaways
+Evaluation methods:
 
-Wine quality can be reasonably predicted using physicochemical features
+Accuracy score
 
-Class imbalance impacts minority class performance
+Classification report
 
-Random Forest provides a solid baseline model
+Confusion matrix
 
-Future Improvements
+📊 Key Insights
 
-Handle class imbalance (e.g., SMOTE or class weights)
+Alcohol, sulphates, and acidity show meaningful relationships with quality
+
+Class imbalance impacts minority quality predictions
+
+Random Forest provides a solid baseline for classification tasks
+
+🔧 Future Improvements
+
+Apply class balancing techniques (SMOTE, class weights)
 
 Hyperparameter tuning
 
 Compare classification vs regression approaches
 
-Author
+Feature importance analysis
 
+📌 Author
 Jonathan Bedoya
-Data Analyst / BI / Product Data Analyst
+Data Analyst | BI Developer | Analytics-Focused ML
+LinkedIn: https://www.linkedin.com/in/jonathanbedoya1993
